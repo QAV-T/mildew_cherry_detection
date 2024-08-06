@@ -3,7 +3,7 @@ import streamlit as st
 def page_project_summary_fn():
     st.header("Project Summary")
     st.write("""
-    ## Project Summary
+    
     This project involves building a convolutional neural network (CNN) to classify cherry leaves as healthy or infected with mildew.
     The main steps included:
     

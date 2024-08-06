@@ -117,13 +117,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def page_leaf_visualizer_fn():
-    st.header("Leaf Visualizer")
+    st.header("Cherry Leaf Visualizer")
     
     # Placeholder visualization
-    st.subheader("Sample Cherry Leaf Image")
-    fig, ax = plt.subplots()
-    ax.imshow(np.random.rand(150, 150, 3))  # Random image as a placeholder
-    st.pyplot(fig)
+    if st.checkbox("Sample Cherry Leaf Image"):
+        fig, ax = plt.subplots()
+        ax.imshow(np.random.rand(150, 150, 3))  # Random image as a placeholder
+        st.pyplot(fig)
     
-    st.subheader("Data Distribution")
-    st.image("models/labels_distribution.png", caption='Class Distribution')
+    if st.checkbox("Difference between average and variability image"):
+        st.subheader("Healthy Leaf")
+        st.image("models/avg_var_healthy.png", caption='Healthy Leaf-Average and Variability')
+        st.subheader("Mildew Leaf")
+        st.image("models/avg_var_mildew.png", caption='Mildew Leaf-Average and Variability')
+    
+    if st.checkbox("Data Distribution"):
+        st.image("models/labels_distribution.png", caption='Data Distribution')
+        
+    if st.checkbox("Image Montage"):
+        st.subheader("Create Montage")
+        label = st.selectbox("Select Label", ["Healthy", "Mildew"])
+        st.image("models/image_montage.png", caption=f'{label} Leaf Montage')
