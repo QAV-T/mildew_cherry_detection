@@ -12,6 +12,9 @@ def page_ml_performance_fn():
         f"Explore the different visualizations to understand the model's training history and evaluation metrics.\n\n"
     )
     
+    # # Load evaluation metrics
+    # evaluation = joblib.load("models/evaluation.pkl")
+    
     st.subheader("Data Distribution")
     st.image("models/labels_distribution.png", caption='Data Distribution')
     
@@ -28,5 +31,14 @@ def page_ml_performance_fn():
     st.subheader("Model Training Accuracy")
     st.image("models/training_validation_acc.png", caption='Training and Validation Accuracy')
     
+    
+
+       
+      
+    
+    # st.subheader("Test Evaluation Metrics")
+    # evaluation = joblib.load("models/evaluation.pkl")  # Define the evaluation variable
+    # st.write(f'Test Loss: {evaluation[0]:.4f}')
+    # st.write(f'Test Accuracy: {evaluation[1] * 100:.2f}%')
     
 

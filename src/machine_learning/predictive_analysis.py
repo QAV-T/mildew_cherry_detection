@@ -22,7 +22,7 @@ def make_prediction(my_image):
     Load and perform ML prediction over images provided
     """
 
-    model = load_model(f'models/mildew_detector_model.h5')
+    model = load_model(f'models/cherry_leaf_model.h5')
     prediction_probability = model.predict(my_image)[0, 0]
     predictions_labels = {'healthy': 0, 'mildew': 1}
 
