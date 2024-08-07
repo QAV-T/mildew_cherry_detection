@@ -9,9 +9,9 @@ from app_pages.page_project_summary import page_project_summary_fn
 app = MultiPage(app_name="Cherry Leaf Mildew Detection")
 
 # Add all your applications (pages) here
+app.app_page("ML Performance", page_ml_performance_fn)
 app.app_page("Leaf Visualizer", page_leaf_visualizer_fn)
 app.app_page("Mildew Detector", page_mildew_detector_fn)
-app.app_page("ML Performance", page_ml_performance_fn)
 app.app_page("Project Hypothesis", page_project_hypothesis_fn)
 app.app_page("Project Summary", page_project_summary_fn)
 

@@ -19,8 +19,11 @@ def page_leaf_visualizer_fn():
     
     # Placeholder visualization
     if st.checkbox("Samples Cherry Leaf Image"):
-        st.image("models/sample_healthy_leaf.png", caption='Sample Cherry healthy Leaf Image')
-        st.image("models/sample_mildew_leaf.png", caption='Sample Cherry mildew Leaf Image')
+        col1, col2 = st.beta_columns(2)
+        with col1: 
+         st.image("models/sample_healthy_leaf.png", caption='Sample Cherry healthy Leaf Image')
+        with col2:    
+         st.image("models/sample_mildew_leaf.png", caption='Sample Cherry mildew Leaf Image')
     
     if st.checkbox("Difference between average and variability image"):
         st.subheader("Healthy Leaf")
