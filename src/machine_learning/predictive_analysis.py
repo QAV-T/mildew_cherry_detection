@@ -5,6 +5,7 @@ import plotly.express as px
 from tensorflow.keras.models import load_model
 from PIL import Image
 from src.data_management import load_pickle_file
+import os
 
 
 def plot_prediction_probabilities(prediction_prob, prediction_class):
@@ -89,6 +90,7 @@ def make_prediction(my_image, version='v1'):
     return prediction_probability, predicted_class
 
 # Load the model to inspect input shape
-model = load_model('.../models/cherry_leaf_model.h5')
+model_path = os.path.join("models")
+model = load_model('models/cherry_leaf_model.h5')
 input_shape = model.layers[0].input_shape[1:3] # Get the input shape of the model
 print(f"Expected input shape: {input_shape}")
