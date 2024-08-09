@@ -9,6 +9,7 @@ def page_ml_performance_fn():
     st.info(
         "Welcome to the ML Performance page! This page provides a visual representation of the model's performance.\n\n"
         "Explore the different visualizations to understand the model's training history and evaluation metrics.\n\n"
+        "The evaluation metrics include the confusion matrix and classification report, which provide insights into the model's performance on the test data."
     )
     
     # Load evaluation metrics
@@ -17,9 +18,12 @@ def page_ml_performance_fn():
     classification_report = evaluation['classification_report']
     
     st.subheader("Data Distribution")
+    st.write("The data distribution, training history, and evaluation metrics of the model.")
     st.image("models/labels_distribution.png", caption='Data Distribution')
+
     
     st.subheader("Sample Cherry Leaf Image")
+    st.write("This image represents how the model interprets the input data using three color channels (Red, Green, and Blue).")
     fig, ax = plt.subplots()
     ax.imshow(np.random.rand(150, 150, 3))
     st.pyplot(fig)
@@ -53,12 +57,13 @@ def page_ml_performance_fn():
     st.text("The following report gives a detailed look at precision, recall,\n\n and F1-score for each class:")
     st.text(classification_report)
     
-    # Explanation Notes
+   # Explanation Notes
     st.subheader("Interpretation of Results")
     st.write(
-        "Although the accuracy is high, the confusion matrix and classification report show that the model's precision, recall, "
-        "and F1-scores are relatively low. This suggests that the model may struggle to differentiate between 'Healthy' and 'Mildew' leaves."
-        "\n\n"
-    )
-
-
+    "The model has achieved a high accuracy of around 99%, indicating its strong overall performance. "
+    "However, the confusion matrix and classification report reveal that while the model is generally effective, "
+    "there are still some challenges in differentiating between 'Healthy' and 'Mildew' leaves. "
+    "This highlights the importance of not relying solely on accuracy, as precision, recall, and F1-scores provide "
+    "a more nuanced understanding of the model's performance, particularly in how well it handles each class."
+    "\n\n"
+)
