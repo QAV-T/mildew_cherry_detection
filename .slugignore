@@ -1,8 +1,8 @@
-inputs/dataset/test/*
-inputs/dataset/train/*
-inputs/dataset/raw/*
-jupyter_notebooks/*
-app_pages/__pycache__/*
+inputs/dataset/test/
+inputs/dataset/train/
+inputs/dataset/raw/
+jupyter_notebooks/
+app_pages/__pycache__/
 README.md
-readme_imgs/*
+readme_imgs/
 .vscode/*

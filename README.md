@@ -163,7 +163,7 @@ You can visit the project's GitHub repository by clicking on this [link](https:/
 
 heroku stack:set heroku-20 -a your-app-name
 
-## Technologies Used
+## Main Technologies Used
 
 ### Main Data Analysis and Machine Learning Libraries
 

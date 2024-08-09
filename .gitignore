@@ -20,3 +20,6 @@ jupyter_notebooks/03_Model_Training_and_Evaluation(edit).ipynb
 models/cherry_leaf_model-2.h5
 jupyter_notebooks/03_Model_Training_and_Evaluation(edit2).ipynb
 README_5.md
+requirements-2.txt
+requirements-T.txt
+sizes.ipynb
