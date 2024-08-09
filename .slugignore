@@ -1,7 +1,6 @@
 inputs/dataset/test/*
 inputs/dataset/train/*
 inputs/dataset/raw/*
-inputs/dataset/val/*
 jupyter_notebooks/*
 app_pages/__pycache__/*
 README.md
