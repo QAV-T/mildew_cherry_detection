@@ -37,5 +37,5 @@ def page_project_summary_fn():
     
     st.write(
         f"For more detailed information about this project, please visit "
-        f"[the project repository](#)."
+        f"[Project Repository](https://github.com/QAV-T/mildew_cherry_detection)."
     )
