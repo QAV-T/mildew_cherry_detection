@@ -6,3 +6,4 @@ jupyter_notebooks/*
 app_pages/__pycache__/*
 README.md
 readme_imgs/*
+.vscode/*
