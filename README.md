@@ -102,7 +102,25 @@ The client requires a dashboard for:
 
 ## ML Business Case
 
-(Placeholder for the ML business case)
+### Current Situation
+
+Farmy and Foods currently relies on manual inspection by trained employees to distinguish between healthy and mildew-infected cherry leaves. This manual process is prone to errors and is both time-consuming and labor-intensive.
+
+### Project Objective
+
+The goal of this project is to develop a machine learning model that can accurately and efficiently classify cherry leaves as either "healthy" or "mildew-infected." By automating this process, the model will save the business significant time, effort, and resources.
+
+### Model Overview
+
+This machine learning model is a supervised binary classification system trained on images of both healthy and infected cherry leaves. It learns to differentiate between the two by identifying patterns in the images. The model applies a binary classification method to provide a prediction of either "healthy" or "mildew."
+
+### User Requirements
+
+The customer requires a user-friendly dashboard where they can upload both existing and new cherry leaf images for analysis. The model is expected to achieve a prediction accuracy of at least 97%.
+
+### Future Scope
+
+While the current focus is on cherry leaves, the model's application could be extended to detect diseases in other crops.
 
 ## Agile Process
 
@@ -110,7 +128,7 @@ This project was designed and developed following the Agile methodology. The tas
 
 To help visualize the workflow and progress, a [GitHub project](https://github.com/users/QAV-T/projects/3/views/1) was created, utilizing the Kanban board method. This approach enabled efficient tracking of tasks, ensuring that each project element was clearly defined, prioritized, and completed in an organized manner.
 
-![Kanban Board](readme_imgs/Kanban-board.png.png)  
+![Kanban Board](/readme_imgs/Kanban-board.png)  
 
 ## Dashboard Design (Streamlit App User Interface)
 
@@ -120,13 +138,19 @@ The dashboard is a multi-page Streamlit application with a sidebar for navigatio
 
 ### Project Summary Page
 
-Overview of the project and dataset.
-[image]
+Overview of the project, which provides an overview of the project's objectives, dataset, key phases, and future improvements.
+![screen-shot-from-the-summary-page](/readme_imgs/summary.png)
 
 ### Cherry Leaves Visualizer Page
 
-Show findings related to visually differentiating healthy and mildew-infected leaves.
-[image]
+- Show findings related to visually differentiating healthy and mildew-infected leaves.
+- A user can also identify the average images of healthy and infected cherry leaves and consider the differences between them.
+- A user can do an image montage of healthy and infected cherry leaves images.
+![sample-images](/readme_imgs/sample-images.png)
+![difference-avr-variability](/readme_imgs/diff-avr.png)
+![difference-avr-variabilty-mildew-healthy](/readme_imgs/diff-avr-2.png)
+![montage-of-mildew-leaves](/readme_imgs/montage-mildew.png)
+![montage-of-healthy-leaves](/readme_imgs/montage-healthy.png)
 
 ### Powdery Mildew Detection Page
 
@@ -134,17 +158,27 @@ Show findings related to visually differentiating healthy and mildew-infected le
 - User Interface with a file uploader widget.
 - Display the image and a prediction statement.
 - A table with image names and prediction results, and a download button.
-[image]
+![screen-shot-detactor-page](/readme_imgs/prediction-result-1.png)
+![screen-shot-detactor-page-analays](/readme_imgs/prediction-result-2.png)
+![screen-shot-detactor-page-results](/readme_imgs/prediction-result-3.png)
+![screen-shot-detactor-page-report](/readme_imgs/prediction-report.png)
 
 ### Project Hypothesis Page
 
 Display project hypothesis and validation methods.
-[image]
+![hypothesis-page](/readme_imgs/hypothesis.png)
 
 ### ML Performance Metrics Page
 
-Technical details and performance metrics.
-[image]
+Technical details and performance metrics, the page provides a visual representation of the model's performance.
+
+- Explore the different visualizations to understand the model's training history and evaluation metrics.
+- The evaluation metrics include the confusion matrix and classification report, which provide insights into the model's performance on the test data."
+![data-ditribution](/readme_imgs/ml-performance.png)
+![training-history](/readme_imgs/training-history.png)
+![sample-cherry-image-processed](/readme_imgs/sample-cherry-image-processed.png)
+![confusin-matrix](/readme_imgs/confusin_matrix.png)
+![image]
 
 ## Unfixed Bugs
 
@@ -228,6 +262,8 @@ heroku stack:set heroku-20 -a your-app-name
 
 ## Credits
 
-- **Code Institute**
-- **Malaria Detector**
+- [**Code Institute**](codeinstitute.net/) Learning Materials
+- [**Malaria Predictor project**](https://malaria-predictor.onrender.com) A walkthrough Project.
 - **Github Repository**
+  - [*Malaria Predictor Github Repo*](https://github.com/QAV-T/Malaria-Detector)
+  - A template [Repository](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) provided from *Code Institute*.
