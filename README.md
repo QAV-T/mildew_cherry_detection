@@ -28,7 +28,9 @@ To visit this application website live on Heroku, please click on this [link](ht
     3. [Powdery Mildew Detection Page](#powdery-mildew-detection-page)
     4. [Project Hypothesis Page](#project-hypothesis-page)
     5. [ML Performance Metrics Page](#ml-performance-metrics-page)
-8. [Unfixed Bugs](#unfixed-bugs)
+8.  
+    1. [Fixed Bugs](#fixed-bugs)
+    2. [Unfixed Bugs](#unfixed-bugs)
 9. [Deployment](#deployment)
     1. [GitHub](#github)
     2. [Heroku](#heroku)
@@ -180,6 +182,16 @@ Technical details and performance metrics, the page provides a visual representa
 ![confusin-matrix](/readme_imgs/confusin_matrix.png)
 ![image]
 
+## Fixed bugs
+
+### Model Not Found Error After Deployment
+
+**Description**: After successfully deploying the application, all pages were functioning except for the "Make Prediction" feature. When users attempted to make a prediction, an error occurred, stating that the model could not be found in the specified directory.
+
+**Cause**: Despite verifying that the model path was correct, the issue persisted. The root cause was traced back to one of the packages listed in the requirements.txt file. This package conflicted with TensorFlow's load_model function, preventing the model from being loaded correctly.
+
+**Solution**: The issue was resolved by reverting the requirements.txt file to the basic template version. This change removed the conflicting package, allowing TensorFlow's load_model function to operate as expected, and the "Make Prediction" feature worked correctly after deployment.
+
 ## Unfixed Bugs
 
 This project does not include unfixed bugs.
@@ -195,7 +207,22 @@ You can visit the project's GitHub repository by clicking on this [link](https:/
 
 ### Heroku
 
-heroku stack:set heroku-20 -a your-app-name
+- Log into your Heroku account and go to 'Account Settings' in the menu under your avatar.
+- Scroll down to the 'API Key' and click 'Reveal'.
+- Copy that API key.
+- In a Gitpod terminal, run the command 'heroku_config'.
+- You will be asked to paste in your API key in that Gitpod terminal.
+- You can now use the Heroku CLI program. To confirm that it is working, try running the command 'heroku apps' in your Gitpod terminal.
+- This Heroku API key is unique and private to you, so do not share it. If you accidentally make it public then you can create a new one by clicking on 'Regenerate API Key...', which is under your API key.
+- Create an new app on your Heroku account for your project.
+- If a Heroku error appears telling you that the Python version is not available, it may be due to the Heroku's stack used for the application.
+- To fix this, from your Gitpod terminal, log in to the Heroku command line interface, CLI, and type in the command 'heroku stack:set heroku-20 -a your-app-name' to set the stack to Heroku-20.
+- Go to your Heroku app, click on 'Deploy' on the navigation bar.
+- On the 'Deploy' page, scroll down until you find the 'Deployment method' on the left.
+- Select GitHub as the deployment method.
+- Type in your repository name and click on 'Search'. Once it is found, click on 'Connect'.
+- Choose 'main' as the branch to deploy, then click on 'Deploy Branch'.
+- Once your app is deployed, click on 'Open app' on the top right of your Heroku app page.
 
 ## Main Technologies Used
 
