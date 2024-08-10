@@ -34,9 +34,3 @@ def page_project_hypothesis_fn():
     crop management practices. The ability to quickly and accurately identify infected leaves allows for faster response times, reducing the 
     risk of widespread infection and potentially leading to significant cost savings.
     """)
-
-    # st.success("""
-    # The overarching goal of this project is to develop a reliable, efficient, and scalable solution that supports farmers and agricultural 
-    # businesses in maintaining healthy crops and optimizing their production processes. The success of this machine learning model would represent 
-    # a significant advancement in the application of AI in agriculture, demonstrating the potential of technology to enhance traditional farming practices.
-    # """)
