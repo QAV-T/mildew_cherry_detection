@@ -12,7 +12,7 @@ def page_leaf_visualizer_fn():
     st.header("Cherry Leaf Visualizer")
     st.info(
         f"Welcome to the Cherry Leaf Visualizer page! This page provides a visual representation of the cherry leaf dataset.\n\n"
-        f"The objective is to visually differentiate a **healthy** cherry leaf from one that is **affected by powdery mildew**.\n\n"
+        f"The aim here is to visually differentiate a **healthy** cherry leaf from one that is **affected by powdery mildew**.\n\n"
         f"Explore the different visualizations to understand the differences between healthy and diseased leaves.\n\n"
 
     )

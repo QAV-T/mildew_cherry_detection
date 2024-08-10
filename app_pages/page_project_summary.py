@@ -1,26 +1,48 @@
 import streamlit as st
 
 def page_project_summary_fn():
+    
+    st.write("### Site Navigation Manual")
+    st.info(
+        f"To navigate this site, you can use the sidebar on the left. "
+        f"Simply click on the different pages to explore the project's various aspects. \n\n"
+    )
+    st.info(
+        "**Pages Overview**:\n\n"
+        f"**Project Summary**\n\n"
+        "You are currently on the *Project Summary* page, which provides an overview of the project's objectives, key phases, and future improvements.\n\n"
+        f"**Cherry Leaves Visualizer** \n\n"  
+        "Navigate to *Leaf Visualizer* to explore the findings related to visually differentiating healthy and mildew-infected leaves.\n\n"
+        
+        f" **Powdery Mildew Detection**\n\n"
+        "In the *Powdery Mildew Detection* access a file uploader where you can upload a set of cherry leaf images for live prediction, you will see the image along with a prediction statement and a download button for the results.\n\n"
+        
+        f"**Project Hypothesis**\n\n" 
+        "Click on *Project Hypothesis* to view the project's hypothesis and validation methods. \n\n"
+        f"**ML Performance Metrics**\n\n" 
+        "Check *ML Performance Metrics* to dive into the technical details and performance metrics of the model."
+    ) 
+    
     st.header("Project Summary")
     
     st.write("### General Information")
-    st.info(
+    st.write(
         f"Powdery mildew is a widespread fungal disease that significantly impacts various crops, including cherry trees. "
         f"Manual detection of this disease is impractical due to the vast number of trees in a typical cherry orchard, "
         f"making an automated solution highly desirable.\n\n"
         f"This project aims to address this challenge by developing a machine learning model capable of analyzing cherry leaf images "
         f"to determine if they are healthy or infected with powdery mildew. By leveraging deep learning techniques, "
         f"we aim to create an efficient and scalable solution that can support early detection and disease management in agriculture."
-    )
-    
-    st.write("### Project Dataset")
-    st.info(
+        
+        "**Project Dataset**"
         f"The dataset used in this project consists of images of cherry leaves provided by **Farmy & Foods**. "
         f"These images were meticulously collected and labeled to ensure the accuracy and reliability of the model during training."
     )
+        
 
+       
     st.write("### Key Project Phases")
-    st.success(
+    st.write(
         f"The project was carried out through several key phases:\n\n"
         f"1. **Data Collection and Preprocessing**: Gathering and preparing a comprehensive dataset of cherry leaf images.\n\n"
         f"2. **Data Augmentation**: Applying various techniques to artificially expand the dataset and improve model robustness.\n\n"
