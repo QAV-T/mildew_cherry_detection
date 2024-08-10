@@ -91,6 +91,6 @@ def make_prediction(my_image, version='v1'):
 
 # Load the model to inspect input shape
 file_path = os.path.join("models")
-model = load_model('models/cherry_leaf_model.h5')
+model = load_model("models/cherry_leaf_model.h5")
 input_shape = model.layers[0].input_shape[1:3] # Get the input shape of the model
 print(f"Expected input shape: {input_shape}")
