@@ -60,10 +60,10 @@ def page_ml_performance_fn():
    # Explanation Notes
     st.subheader("Interpretation of Results")
     st.write(
-    "The model has achieved a high accuracy of around 99%, indicating its strong overall performance. "
-    "However, the confusion matrix and classification report reveal that while the model is generally effective, "
-    "there are still some challenges in differentiating between 'Healthy' and 'Mildew' leaves. "
-    "This highlights the importance of not relying solely on accuracy, as precision, recall, and F1-scores provide "
+    "The model has achieved an exceptional accuracy of 99%, reflecting its strong overall performance.  "
+    "The classification report further reinforces this, showing that both 'Healthy' and 'Mildew' classes are handled with high precision,  recall, and F1-scores of 0.99 or higher. "
+    "These results indicate that the model is highly effective at differentiating between 'Healthy' and 'Mildew' leaves, with minimal misclassification.  "
+    "This demonstrates that the model not only performs well in terms of accuracy but also excels in handling each class effectively, as precision, recall, and F1-scores provide "
     "a more nuanced understanding of the model's performance, particularly in how well it handles each class."
     "\n\n"
 )
