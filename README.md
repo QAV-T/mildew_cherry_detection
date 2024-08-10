@@ -3,7 +3,7 @@
 ## Project Summary
 
 This project aims to develop a machine learning model to visually differentiate between healthy cherry leaves and those affected by powdery mildew. The model will predict the health status of cherry leaves using images and will be deployed in a user-friendly dashboard for real-time predictions.
-To visit this application website live on Heroku, please click on this [link]().
+To visit this application website live on Heroku, please click on this [link](https://mildew-cherry-detection-5028c12c85c3.herokuapp.com/).
 
 ## Index
 
@@ -32,7 +32,7 @@ To visit this application website live on Heroku, please click on this [link]().
 9. [Deployment](#deployment)
     1. [GitHub](#github)
     2. [Heroku](#heroku)
-10. [Technologies Used](#technologies-used)
+10. [Technologies Used](#main-technologies-used)
     1. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
     2. [Machine Learning Frameworks and Libraries](#machine-learning-frameworks-and-libraries)
     3. [Development and Hosting](#development-and-hosting)

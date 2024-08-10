@@ -65,6 +65,9 @@ def make_prediction(my_image, version='v1'):
     """
     Load and perform ML prediction over images provided
     """
+    file_path = os.path.join('models')
+    print("Files in models directory:", os.listdir("models/"))
+    print("Current working directory:", os.getcwd())
     model = load_model('models/cherry_leaf_model.h5')
     
     # Verify the input shape
