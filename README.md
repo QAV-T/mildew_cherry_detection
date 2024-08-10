@@ -110,7 +110,7 @@ This project was designed and developed following the Agile methodology. The tas
 
 To help visualize the workflow and progress, a [GitHub project](https://github.com/users/QAV-T/projects/3/views/1) was created, utilizing the Kanban board method. This approach enabled efficient tracking of tasks, ensuring that each project element was clearly defined, prioritized, and completed in an organized manner.
 
-![Kanban Board](readme_imgs/kanban_board.png)  
+![Kanban Board](readme_imgs/Kanban-board.png.png)  
 
 ## Dashboard Design (Streamlit App User Interface)
 
