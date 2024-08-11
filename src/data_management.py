@@ -2,8 +2,10 @@ import joblib
 import base64
 from datetime import datetime
 
+
 def load_pickle_file(file_name):
     return joblib.load(filename=file_name)
+
 
 def download_dataframe_as_csv(df):
 

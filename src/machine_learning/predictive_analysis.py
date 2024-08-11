@@ -38,26 +38,26 @@ def plot_prediction_probabilities(prediction_prob, prediction_class):
 def resize_input_image(img, target_shape):
     """
     Resize image to the target shape expected by the model.
-    
+
     Parameters:
     img (PIL.Image.Image): The input image to be resized.
     target_shape (tuple): The target shape (height, width) to resize the image to.
-    
+
     Returns:
     np.ndarray: The resized image as a numpy array, normalized and expanded to include a batch dimension.
     """
     # Resize the image to the target shape
     img_resized = img.resize(target_shape, Image.Resampling.LANCZOS)
-    
+
     # Convert the resized image to a numpy array
     img_array = np.array(img_resized)
-    
+
     # Normalize the image array to be in the range [0, 1]
     img_array = img_array / 255.0
-    
+
     # Expand dimensions to add batch size (1, height, width, channels)
     img_array = np.expand_dims(img_array, axis=0)
-    
+
     return img_array
 
 
@@ -69,13 +69,12 @@ def make_prediction(my_image, version='v1'):
     print("Files in models directory:", os.listdir("models/"))
     print("Current working directory:", os.getcwd())
     model = load_model('models/cherry_leaf_model.h5')
-    
+
     # Verify the input shape
     print(f"Model input shape: {model.input_shape}")
     print(f"Image shape: {my_image.shape}")
 
     prediction_probability = model.predict(my_image)[0, 0]
-    
     predictions_labels = {'healthy': 0, 'mildew': 1}
     target_map = {v: k for k, v in predictions_labels.items()}
     predicted_class = target_map[prediction_probability > 0.5]
@@ -91,9 +90,3 @@ def make_prediction(my_image, version='v1'):
 
     st.write(statement)
     return prediction_probability, predicted_class
-
-# Load the model to inspect input shape
-# file_path = os.path.join("models")
-# model = load_model('models/cherry_leaf_model.h5')
-# input_shape = model.layers[0].input_shape[1:3] # Get the input shape of the model
-# print(f"Expected input shape: {input_shape}")

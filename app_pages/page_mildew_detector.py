@@ -10,6 +10,7 @@ from src.machine_learning.predictive_analysis import (
 )
 from src.data_management import download_dataframe_as_csv
 
+
 def page_mildew_detector_fn():
     st.write('### Objective')
     st.info(
@@ -27,11 +28,12 @@ def page_mildew_detector_fn():
         if st.button("Make Prediction"):
             upload_and_predict(images_buffer)
 
+
 def upload_and_predict(images_buffer):
     if images_buffer is not None:
         report = pd.DataFrame([])
         for image in images_buffer:
-            
+
             img = Image.open(image)
             st.info(f"Cherry Leaf Sample: **{image.name}**")
             img_array = np.array(img)
@@ -55,4 +57,3 @@ def upload_and_predict(images_buffer):
 
     # Ensure the correct shape
     print(f"Input image shape after resizing: {resized_img.shape}")
-    
