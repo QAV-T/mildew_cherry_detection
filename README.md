@@ -7,6 +7,7 @@ To visit this application website live on Heroku, please click on this [link](ht
 
 ## Index
 
+1. [CRISP-DM](#crisp-dm)
 1. [Dataset Content](#dataset-content)
 2. [Business Requirements](#business-requirements)
     1. [First Business Requirement](#first-business-requirement)
@@ -29,8 +30,9 @@ To visit this application website live on Heroku, please click on this [link](ht
     4. [Project Hypothesis Page](#project-hypothesis-page)
     5. [ML Performance Metrics Page](#ml-performance-metrics-page)
 8.  
-    1. [Fixed Bugs](#fixed-bugs)
-    2. [Unfixed Bugs](#unfixed-bugs)
+    1. [Manual Testing](#manual-testing)
+    2. [Fixed Bugs](#fixed-bugs)
+    3. [Unfixed Bugs](#unfixed-bugs)
 9. [Deployment](#deployment)
     1. [GitHub](#github)
     2. [Heroku](#heroku)
@@ -39,6 +41,23 @@ To visit this application website live on Heroku, please click on this [link](ht
     2. [Machine Learning Frameworks and Libraries](#machine-learning-frameworks-and-libraries)
     3. [Development and Hosting](#development-and-hosting)
 11. [Credits](#credits)
+
+## CRISP-DM
+Using (Cross-Industry Standard Process for Data Mining) methodology for data science and machine learning projects, It provides a structured approach to planning, executing and managing the project.
+#### Business Understanding
+The project aims to develop a machine learning model to visually differentiate between healthy cherry leaves and those affected by powdery mildew. The model will predict the health status of cherry leaves using images and will be deployed in a user-friendly dashboard for real-time predictions. Achieving a prediction accuracy of at least 97% is **necessary** to meet the business needs. The model should save time, effort, and money in the manual inspection process.
+#### Data Understanding
+Gather images of healthy and mildew-infected cherry leaves. Understand the source and nature of the data, such as the resolution of images and the distribution of classes. 
+Analyze the images to **understand** the features that differentiate healthy leaves from infected ones. Look for patterns, distributions, and any anomalies in the dataset.
+#### Data Preparation
+Ensure all images are properly labeled and remove any non-image files. Resize images to a consistent shape and normalize pixel values. After **cleaning**, perform data augmentation to increase the dataset size and diversity, helping the model generalize better.
+#### Modeling
+Choose an appropriate machine learning model, such as a Convolutional Neural Network (CNN), which is well-suited for image classification tasks. **Train** the model on the prepared dataset, experimenting with different architectures and hyperparameters to optimize performance.
+#### Evaluation
+Evaluate the model using metrics such as accuracy, precision, recall, and F1-score. Ensure the model performs well across all classes (healthy and mildew). **Validate** Cross-validate the model to check its robustness and ensure it doesn't overfit the training data.
+#### Deployment
+Deploy the model in a user-friendly web application using Streamlit, where users can upload images and receive predictions. Monitor** Continuously monitor the model's performance in the real world, making adjustments as needed based on new data or changing requirements.
+Conclusion
 
 ## Dataset Content
 
@@ -161,8 +180,8 @@ Overview of the project, which provides an overview of the project's objectives,
 - Display the image and a prediction statement.
 - A table with image names and prediction results, and a download button.
 ![screen-shot-detactor-page](/readme_imgs/prediction-result-1.png)
-![screen-shot-detactor-page-analays](/readme_imgs/prediction-result-2.png)
-![screen-shot-detactor-page-results](/readme_imgs/prediction-result-3.png)
+![screen-shot-detactor-page-analays](/readme_imgs/prediction-result-3.png)
+![screen-shot-detactor-page-results](/readme_imgs/prediction-result-2.png)
 ![screen-shot-detactor-page-report](/readme_imgs/prediction-report.png)
 
 ### Project Hypothesis Page
@@ -180,8 +199,53 @@ Technical details and performance metrics, the page provides a visual representa
 ![training-history](/readme_imgs/training-history.png)
 ![sample-cherry-image-processed](/readme_imgs/sample-cherry-image-processed.png)
 ![confusin-matrix](/readme_imgs/confusin_matrix.png)
-![image]
 
+## Manual Testing
+
+### Streamlit App
+Streamlit app was tested manually using features/user stories.
+
+#### Navigation
+
+| Feature                           | Action        | Expected Result | Success |
+| --------------------------------- | ------------- | --------------- | ------- |
+| Project Summary                   | Click on link | Taken to page   | Yes     |
+| Cherry Leaves Visualizer          | Click on link | Taken to page   | Yes     |
+| Powdery Mildew Predictor          | Click on link | Taken to page   | Yes     |
+| Project Hypotheses                | Click on link | Taken to page   | Yes     |
+| ML Performance Metrics            | Click on link | Taken to page   | Yes     |
+
+| Feature                     | Action                           | Expected Result                                                       | Success |
+| --------------------------- | -------------------------------- | --------------------------------------------------------------------- | ------- |
+| Cherry Leaves Visualizer    |                                  |                                                                       |         |
+| Description of the page     | View Leaf Visualizer page        | Get descripting of the page aims                                      | Yes     |
+| Samples Cherry Leaf Image   | Select the checkbox              | Open two sample images of healthy and mildew leaf                     | Yes     |
+| Average and variability     | Select the checkbox              | Image with a note of difference between average and variability       | Yes     |
+| Healthy and Powdery Mildew  | Select the checkbox              | Image with note of shows Differences between Healthy and Mildew       | Yes     |
+| Image Montage               | Select the checkbox              | labels to select from Healthy or Mildew                               | Yes     |
+| Create Montage              | Select the label                 | Montage of the images from the selected label                         | Yes     |
+
+
+
+| Feature                                | Action                           | Expected Result                                                       | Success |
+| -------------------------------------- | -------------------------------- | --------------------------------------------------------------------- | ------- |
+| Leaf Mildew Detection page             |                                  |                                                                       |         |
+| Page Objective                         | Leaf Mildew Detection page       |                                                                       | Yes     |
+| Upload an Image                        | Click, or drag and drop          | Image Succesfuly upload                                               | Yes     |
+| Make prediction                        | Click Make prediction            | See result and read the report                                        | Yes     |
+| Download Report                        | Click Download Report            | Report download as a csv file                                         | Yes     |
+
+
+| Feature                                | Action                           | Expected Result                                                       | Success |
+| -------------------------------------- | -------------------------------- | --------------------------------------------------------------------- | ------- |
+| Project Hypothesis page                |                                  |                                                                       |         |
+| Read about the Project Hypothesis      | View Hypothesis Page             |  Project Hypothesis                                                   | Yes     |
+
+
+| Feature                                | Action                           | Expected Result                                                       | Success |
+| -------------------------------------- | -------------------------------- | --------------------------------------------------------------------- | ------- |
+| ML Performance page                    |                                  |                                                                       |         |
+| Technical details and performance metrics | View ML Performance Page      | Different visualizations of training history and evaluation metrics                                                 | Yes     |
 ## Fixed bugs
 
 ### Model Not Found Error After Deployment
